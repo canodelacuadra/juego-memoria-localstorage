@@ -4,13 +4,15 @@ console.log(reverso)
 
 // cargamos los elementos del DOM del index 
 const tablero = document.querySelector(".tablero");
-const puntuacionElement = document.getElementById("puntuacion");
+const btnPlay = document.getElementById('btn-play')
+const puntuacion = document.getElementById("puntuacion");
 function jugar() {
     mostrarNaipes(naipes, reverso);
+    btnPlay.disabled = true;
     
 }
 //jugar();
-document.getElementById('btn-play').addEventListener('click', jugar)
+btnPlay.addEventListener('click', jugar)
 // mostrar naipes - mostrará el doble de naipes de los naipes dados 
 function mostrarNaipes(naipes, reverso) {
      // Barajar las naipes
@@ -21,9 +23,9 @@ function mostrarNaipes(naipes, reverso) {
         //creamos un template accediendo al nombre y al url de cada imagen
         let templateImg = `
         <figure class='naipe'>
-        <img class='frente' alt ='${naipe.title}'src='${naipe.url}'/>
-        <img  class='reverso'src='${reverso}'/>
-        <figcaption class='nombre'>${naipe.title}</figcaption>
+            <img class='frente' alt ='${naipe.title}'src='${naipe.url}'/>
+            <img  class='reverso'src='${reverso}'/>
+            <figcaption class='nombre'>${naipe.title}</figcaption>
         </figure>
         `
         // se lo agragamos al tablero
