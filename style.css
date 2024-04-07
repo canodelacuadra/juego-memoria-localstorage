@@ -1,10 +1,36 @@
+.tablero {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px 20px;
+    background-color: green;
+    min-height: 60vh;
+    padding: 1em;
+}
+
+.naipe {
+    width: 200px;
+    height: 320px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    position: relative;
+
+}
+
+.naipe img {
+    position: fixed;
+    width: 180px;
+    height: auto;
+}
+
+.naipe .reverso:hover {
+    opacity: 0;
+}
 
 
-:root {
-    --color-fondo: #fff;
-    --color-carta-frente: #f0f0f0;
-    --color-carta-reverso: #ccc;
-    --color-texto: #333;
+/* 
 }
 
 .tablero {
@@ -44,4 +70,4 @@
 #puntuacion {
     font-size: 18px;
     font-weight: bold;
-}
+} */
