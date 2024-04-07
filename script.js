@@ -21,8 +21,9 @@ function mostrarNaipes(naipes, reverso) {
         //creamos un template accediendo al nombre y al url de cada imagen
         let templateImg = `
         <figure class='naipe'>
-        <img class='frente' alt ='${naipe.nombre}'src='${naipe.url}'/>
+        <img class='frente' alt ='${naipe.title}'src='${naipe.url}'/>
         <img  class='reverso'src='${reverso}'/>
+        <figcaption class='nombre'>${naipe.title}</figcaption>
         </figure>
         `
         // se lo agragamos al tablero

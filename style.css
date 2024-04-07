@@ -1,3 +1,13 @@
+@font-face {
+    font-family: manuscrita;
+    src: url('fonts/cathylisejanetson/Cathylise_Janetson.otf');
+}
+
+h1 {
+    padding: 1rem;
+    font-family: manuscrita;
+}
+
 .tablero {
     display: flex;
     flex-wrap: nowrap;
@@ -20,9 +30,16 @@
 }
 
 .naipe img {
-    position: fixed;
-    width: 180px;
+    position: absolute;
+    width: 80%;
     height: auto;
+}
+
+.naipe figcaption {
+    font-family: manuscrita;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
 }
 
 .naipe .reverso:hover {
